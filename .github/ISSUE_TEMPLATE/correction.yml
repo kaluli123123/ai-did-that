@@ -1,0 +1,25 @@
+name: Suggest a correction
+description: Flag an unsupported claim, missing attribution, changed source, or accessibility issue.
+title: "[Correction] "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Which case or page?
+      description: Give its URL or filename and the relevant passage.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs to change?
+      description: Explain the problem and suggest corrected wording or an action.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence for the correction
+      description: Link sources for factual corrections or describe how to reproduce a display or accessibility problem.
+    validations:
+      required: true

@@ -1,0 +1,50 @@
+name: Submit a case
+description: Propose an AI-assisted outcome with sources and human credit.
+title: "[Case] "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What happened, and when?
+      description: Give a concrete outcome, date, and any comparison baseline or test conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: ai-contribution
+    attributes:
+      label: What did AI do?
+      description: Name the system and version if known. Explain its contribution.
+    validations:
+      required: true
+  - type: textarea
+    id: human-contribution
+    attributes:
+      label: What did people do?
+      description: Credit the researchers, creators, participants, or teams and their work.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence-type
+    attributes:
+      label: What kind of evidence is available?
+      options:
+        - Published research
+        - Project-reported result
+        - Provider-reported deployment
+        - Firsthand account
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and artifacts
+      description: Link primary sources or a public artifact, state what each supports, and give the date you checked them. Identify any independent replication.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits and unverified claims
+      description: Describe restrictions, uncertainty, and what has not been independently checked.
+    validations:
+      required: true
